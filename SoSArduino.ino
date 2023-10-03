@@ -2,13 +2,16 @@ int pinnumber=13;
 
 void setup() {
   // put your setup code here, to run once:
-pinMode(pinnumber,OUTPUT);
+pinMode(LED_BUILTIN,OUTPUT);
+}
+
+void blinkOnce(int time){
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(time);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(time);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-digitalWrite(pinnumber, 1);
-delay(500);
-digitalWrite(pinnumber, 0);
-delay(500);
+  blinkOnce(1000);
 }
